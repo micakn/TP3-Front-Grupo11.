@@ -1,4 +1,4 @@
-// Home.jsx - TP2 con efectos del TP1
+// Home.jsx - TP3 con mejoras implementadas
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -61,13 +61,14 @@ export default function Home() {
           <h3>¡Bienvenido a TechVerse!</h3>
           <p>
             Un multiverso digital donde cada integrante tiene su propio portal. 
-            Este proyecto representa la <strong>migración del TP1 a React</strong>, 
-            transformándolo en una SPA moderna con componentes reutilizables.
+            Este proyecto evolucionó del <strong>TP1 (HTML/CSS/JS estático)</strong> al 
+            <strong>TP2 (React SPA)</strong> y ahora al <strong>TP3 con mejoras significativas</strong> 
+            en UX, funcionalidad e interactividad.
           </p>
         </div>
       </section>
 
-      {/* Estadísticas del TP2 */}
+      {/* Estadísticas del TP3 */}
       <section className="stats-section">
         <h2 className="titulo-principal">Proyecto en números</h2>
         <div className="stats-grid">
@@ -92,6 +93,11 @@ export default function Home() {
             <p>Reproductor global</p>
           </div>
           <div className="stat-card">
+            <span className="stat-icon">✨</span>
+            <h3>5</h3>
+            <p>Mejoras TP3</p>
+          </div>
+          <div className="stat-card">
             <span className="stat-icon">🧩</span>
             <h3>12+</h3>
             <p>Componentes React</p>
@@ -112,9 +118,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Características TP2 */}
+      {/* Características TP2 + TP3 */}
       <section className="features-section">
-        <h2 className="titulo-principal">✨ Características del TP2</h2>
+        <h2 className="titulo-principal">✨ Características del Proyecto</h2>
         <div className="features-grid">
           <div className="feature-card">
             <span className="feature-icon">⚛️</span>
@@ -154,20 +160,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mejoras TP3 */}
+      <section className="features-section" style={{background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(139, 92, 246, 0.05))', padding: '3rem 0', marginTop: '2rem'}}>
+        <h2 className="titulo-principal">🚀 Mejoras del TP3</h2>
+        <div className="features-grid">
+          <div className="feature-card" style={{border: '2px solid rgba(168, 85, 247, 0.3)'}}>
+            <span className="feature-icon">✨</span>
+            <h4>Animaciones Suaves</h4>
+            <p>Efectos hover mejorados y transiciones escalonadas</p>
+          </div>
+          <div className="feature-card" style={{border: '2px solid rgba(168, 85, 247, 0.3)'}}>
+            <span className="feature-icon">🔍</span>
+            <h4>Búsqueda y Filtrado</h4>
+            <p>Sistema completo de búsqueda en películas (texto, género, años)</p>
+          </div>
+          <div className="feature-card" style={{border: '2px solid rgba(168, 85, 247, 0.3)'}}>
+            <span className="feature-icon">📄</span>
+            <h4>Paginación</h4>
+            <p>Navegación por páginas en la API de Deezer</p>
+          </div>
+          <div className="feature-card" style={{border: '2px solid rgba(168, 85, 247, 0.3)'}}>
+            <span className="feature-icon">🖼️</span>
+            <h4>Lightbox Interactivo</h4>
+            <p>Visualizador de imágenes con zoom y navegación</p>
+          </div>
+          <div className="feature-card" style={{border: '2px solid rgba(168, 85, 247, 0.3)'}}>
+            <span className="feature-icon">📊</span>
+            <h4>Barras de Progreso</h4>
+            <p>Habilidades animadas con porcentajes visuales</p>
+          </div>
+        </div>
+      </section>
+
       {/* Proyecto */}
       <section className="section-project">
         <h2 className="titulo-principal">Sobre el Proyecto</h2>
         <div className="project-panel">
           <p>
-            <strong>TechVerse</strong> es la evolución del TP1 a una arquitectura React moderna. 
+            <strong>TechVerse</strong> es la evolución completa del proyecto: desde el <strong>TP1</strong> (sitio estático HTML/CSS/JS) 
+            al <strong>TP2</strong> (React SPA) y ahora al <strong>TP3</strong> con mejoras significativas. 
             Implementamos una <strong>Single Page Application</strong> con componentes reutilizables, 
-            React Router para navegación fluida, y consumo de datos dinámicos desde JSON local y 
-            APIs públicas.
+            React Router para navegación fluida, y consumo de datos dinámicos desde JSON local y APIs públicas.
           </p>
           <p>
             Cada integrante mantiene su portal individual con diseño único, demostrando la flexibilidad 
-            de React para gestionar múltiples estilos dentro de un mismo proyecto. El sidebar responsive 
-            se adapta a todos los dispositivos con menú hamburguesa en móviles.
+            de React para gestionar múltiples estilos dentro de un mismo proyecto. El <strong>TP3</strong> agrega 
+            animaciones suaves, búsqueda avanzada, paginación, lightbox interactivo y barras de progreso 
+            animadas, mejorando significativamente la experiencia de usuario.
           </p>
           <div className="cta-buttons">
             <Link to="/bitacora" className="btn btn-secondary">

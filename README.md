@@ -3,43 +3,23 @@
 [![React](https://img.shields.io/badge/React-18.0.0-blue?logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.0.0-purple?logo=vite)](https://vitejs.dev/)
 [![CSS3](https://img.shields.io/badge/CSS3-Modern-orange?logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Deployed](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://tp-2-front-grupo11-rho.vercel.app/)
+[![Deployed](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://tp-3-front-grupo11.vercel.app/)
 
 ## 🌐 Links del Proyecto
 
 - **🚀 Deploy en Vercel:** [https://tp-3-front-grupo11.vercel.app/](https://tp-3-front-grupo11.vercel.app/)
-- **📂 Repositorio GitHub:** [https://github.com/micakn/TP3-Front-Grupo11.](https://github.com/micakn/TP3-Front-Grupo11.)
+- **📂 Repositorio GitHub:** [https://github.com/micakn/TP3-Front-Grupo11](https://github.com/micakn/TP3-Front-Grupo11)
 
 ---
 
 ## 📋 Descripción
 
-**TechVerse** es una **Single Page Application (SPA)** desarrollada en React que presenta a nuestro equipo de desarrollo. Este proyecto representa la **migración completa del TP1** (sitio web estático HTML/CSS/JS) a una arquitectura moderna de React, implementando componentes reutilizables, routing dinámico y consumo de APIs.
+**TechVerse** es una **Single Page Application (SPA)** desarrollada en React que presenta a nuestro equipo de desarrollo. Este proyecto representa la evolución desde el **TP2** (React SPA base) al **TP3**, implementando mejoras significativas en experiencia de usuario, funcionalidad e interactividad.
 
-### 🎯 Objetivo Principal
+### 🎯 Evolución del Proyecto
 
-Transformar el sitio web estático del TP1 en una SPA moderna utilizando React, mejorando la modularidad, escalabilidad y experiencia de usuario mediante:
-- Componentización efectiva
-- Gestión de estado con hooks
-- Integración de datos dinámicos (JSON local + API pública)
-- Diseño responsive avanzado
-
----
-
-## 🚀 Características Principales
-
-### ✨ Funcionalidades Implementadas
-
-| Característica | Descripción |
-|----------------|-------------|
-| **🛣️ SPA con React Router** | Navegación fluida sin recarga de páginas entre secciones |
-| **📱 Sidebar Responsive** | Menú lateral fijo con modo hamburguesa en móviles |
-| **🎨 Portales Individuales** | Cada integrante con diseño único y datos dinámicos |
-| **🌐 APIs Integradas** | Películas desde JSON local (20+) y música desde Deezer API |
-| **📐 Diseño Responsive** | Optimizado para desktop, tablet y móvil |
-| **⚡ Loading States** | Indicadores de carga mientras se obtienen datos |
-| **🎯 Componentización** | Arquitectura modular con componentes reutilizables |
-| **📊 Diagramas Técnicos** | Visualización de la arquitectura del proyecto |
+- **TP1 → TP2:** Migración de sitio estático HTML/CSS/JS a React SPA con componentes reutilizables, routing dinámico y consumo de APIs
+- **TP2 → TP3:** Implementación de 5 mejoras obligatorias que mejoran la UX, funcionalidad y visualización de datos
 
 ---
 
@@ -47,31 +27,34 @@ Transformar el sitio web estático del TP1 en una SPA moderna utilizando React, 
 
 ### Integrantes Activos
 
-| Nombre | Edad | Ubicación | Rol | Especialidades |
-|--------|------|-----------|-----|----------------|
-| **Paula** | 32 años | Berazategui, Buenos Aires | Full Stack Developer | HTML, CSS, PHP, JavaScript |
-| **Micaela** | 31 años | Buenos Aires, Argentina | Frontend Developer & Design Enthusiast | Impresión 3D, Diseño Creativo, Programación |
-| **María** | 44 años | Córdoba, Argentina | Creative Designer & Project Manager | Organización, Trabajo en equipo, Comunicación |
+| Nombre      | Edad    | Ubicación                 | Rol                                    | Especialidades                                |
+| ----------- | ------- | ------------------------- | -------------------------------------- | --------------------------------------------- |
+| **Paula**   | 32 años | Berazategui, Buenos Aires | Full Stack Developer                   | HTML, CSS, PHP, JavaScript                    |
+| **Micaela** | 31 años | Buenos Aires, Argentina   | Frontend Developer & Design Enthusiast | Impresión 3D, Diseño Creativo, Programación   |
+| **María**   | 44 años | Córdoba, Argentina        | Creative Designer & Project Manager    | Organización, Trabajo en equipo, Comunicación |
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
 ### Frontend Core
+
 - **⚛️ React 18** - Librería principal con hooks modernos
 - **🚀 Vite** - Build tool rápido y dev server optimizado
 - **🛣️ React Router DOM 6** - Navegación SPA declarativa
 - **🎨 CSS3 Puro** - Estilos modernos sin frameworks (CSS Variables, Flexbox, Grid)
 
 ### Gestión de Datos
+
 - 📦 Fetch API - Consumo asíncrono de datos
-- 🔄 React Hooks - `useState`, `useEffect` para manejo de estado
+- 🔄 React Hooks - `useState`, `useEffect`, `useMemo` para manejo de estado
 - 🎵 React Context API - Estado global para reproductor de música
 - 📁 JSON Local - 20+ películas almacenadas localmente
 - 🎶 Deezer API - Top chart global en tiempo real
 - 🎧 iTunes Search API - Búsqueda y previews de música sin autenticación
 
 ### Deploy & DevOps
+
 - **☁️ Vercel** - Hosting y CI/CD automático
 - **🔧 Serverless Functions** - Proxy API para Deezer (`/api/deezer.js`)
 - **📱 Progressive Enhancement** - Mejora progresiva para todos los dispositivos
@@ -81,12 +64,13 @@ Transformar el sitio web estático del TP1 en una SPA moderna utilizando React, 
 ## 📁 Estructura del Proyecto
 
 ```
-tp2-front-grupo11/
+tp3-front-grupo11/
 ├── 📁 api/
 │   └── deezer.js              # Proxy serverless para Deezer API
 │
 ├── 📁 public/
-│   └── 📁 img/                # Imágenes, avatares, logos, diagramas
+│   ├── 📁 img/                # Imágenes, avatares, logos, diagramas, capturas TP3
+│   └── 📁 sounds/             # Sonidos para efectos
 │
 ├── 📁 src/
 │   ├── 📁 components/         # Componentes reutilizables
@@ -97,7 +81,8 @@ tp2-front-grupo11/
 │   │   │   ├── CardGrid.jsx
 │   │   │   ├── HeroSection.jsx
 │   │   │   └── ui.css
-│   │   ├── PortalBase.jsx     # Componente base para portales
+│   │   ├── AudioPlayer.jsx   # Reproductor global con Context API
+│   │   ├── PortalBase.jsx
 │   │   ├── SeccionIntegrante.jsx
 │   │   ├── Sidebar.jsx
 │   │   └── TimelineItem.jsx
@@ -113,15 +98,16 @@ tp2-front-grupo11/
 │   │   ├── Bitacora.jsx
 │   │   ├── Diagramas.jsx
 │   │   ├── Home.jsx
-│   │   ├── Integrantes.jsx
-│   │   ├── Musica.jsx
-│   │   └── Peliculas.jsx
+│   │   ├── Integrantes.jsx    # ✨ Mejora TP3: Barras de progreso
+│   │   ├── Musica.jsx         # ✨ Mejora TP3: Paginación
+│   │   ├── MusicaPlayer.jsx
+│   │   └── Peliculas.jsx      # ✨ Mejora TP3: Búsqueda/Filtrado + Lightbox
 │   │
 │   ├── 📁 styles/             # Estilos globales y temas
 │   │   ├── IntegrantesBase.css
 │   │   ├── MediaPages.css
 │   │   ├── themes.css
-│   │   ├── util.css
+│   │   ├── util.css           # ✨ Mejora TP3: Animaciones
 │   │   └── variables.css
 │   │
 │   ├── 📁 utils/
@@ -145,28 +131,33 @@ tp2-front-grupo11/
 ## 🚦 Instalación y Uso
 
 ### Prerrequisitos
-- **Node.js** 18+ 
+
+- **Node.js** 18+
 - **npm** 9+ o **yarn** 1.22+
 
 ### Pasos de Instalación
 
 1. **Clonar el repositorio**
+
 ```bash
-git clone [URL_DEL_REPOSITORIO]
-cd tp2-front-grupo11
+git clone https://github.com/micakn/TP3-Front-Grupo11.git
+cd TP3-Front-Grupo11
 ```
 
 2. **Instalar dependencias**
+
 ```bash
 npm install
 ```
 
 3. **Ejecutar en desarrollo**
+
 ```bash
 npm run dev
 ```
 
 4. **Abrir en el navegador**
+
 ```
 http://localhost:5173
 ```
@@ -176,44 +167,37 @@ http://localhost:5173
 ## 📊 Secciones de la Aplicación
 
 ### 🏠 **Home**
+
 - Página principal con introducción al proyecto
 - Estadísticas actualizadas (3 integrantes, 20+ películas, 2 APIs, reproductor global)
 - Stack tecnológico con íconos animados
-- Características destacadas incluyendo reproductor de música
-- CTAs hacia Bitácora y Diagramas
-
-### 📋 **Bitácora**
-- Timeline interactivo del desarrollo del proyecto
-- Eventos cronológicos desde el TP1 hasta el TP2
-- Decisiones técnicas tomadas
-- Cambios y mejoras implementadas
+- Características destacadas del TP2 y TP3
 
 ### 👥 **Integrantes**
+
 - Presentación del equipo activo
 - Tarjetas interactivas con información de cada integrante
+- **✨ Mejora TP3:** Barras de progreso animadas de habilidades
 - Enlaces directos a portales individuales
 
-### 📊 **Diagramas**
-- **Árbol de Renderizado**: Jerarquía completa de componentes
-- **Estructura de Carpetas**: Organización del proyecto
-- Arquitectura React SPA explicada
-- Flujo de navegación
-- Stack tecnológico detallado
-- Comparación TP1 vs TP2
-
 ### 🎬 **Películas**
+
 - Catálogo de 20+ películas desde JSON local
+- **✨ Mejora TP3:** Sistema de búsqueda y filtrado (texto, género, años)
+- **✨ Mejora TP3:** Lightbox interactivo con zoom y navegación
 - Información detallada: año, género, director, rating, duración
 - Enlaces a IMDb
-- Tarjetas responsive con hover effects
 
 ### 🎵 **Música (Deezer API)**
-- Top 10 canciones globales desde Deezer API
+
+- Top canciones globales desde Deezer API
+- **✨ Mejora TP3:** Paginación con botones Anterior/Siguiente
 - Datos en tiempo real del chart mundial
 - Imágenes de álbumes en alta calidad
 - Enlaces directos a Deezer
 
-### 🎧 **Reproductor (iTunes API)** ⭐ NUEVO
+### 🎧 **Reproductor (iTunes API)**
+
 - Búsqueda libre de canciones y artistas
 - Previews reproducibles de 30 segundos reales
 - Player flotante global persistente en toda la app
@@ -223,93 +207,297 @@ http://localhost:5173
 
 ### 🌟 **Portales Individuales**
 
-#### **💜 Micaela**
-- Diseño violeta/fucsia con dorado
-- Avatar interactivo con efecto hover
-- **Películas**: Twister, Volver al Futuro, Mulan
-- **Música**: BTS, Miranda!, 5 Seconds of Summer
-
-#### **💙 Paula**
-- Tema tech futurista azul
-- Grid de intereses animados
-- **Películas**: Fragmentado, Harry Potter, Interstellar, Inquebrantable
-- **Música**: Soda Stereo, No te va a gustar, Carlos Rivera, Airbag
-
-#### **✨ María**
-- Estilo retro 80s con efectos vintage
-- **Películas**: El viaje de Chihiro, Mi vecino Totoro, El castillo ambulante
-- **Música**: Hoobastank, Audioslave, Keane
+Cada integrante mantiene su propio portal con diseño único y datos personalizados.
 
 ---
 
-## 🔧 Características Técnicas Avanzadas
+## 🚀 TP3 - Mejoras y Evolución del Proyecto
 
-### 🎨 Diseño y UX
-- **Mobile-First Approach**: Diseño prioritario para móviles
-- **CSS Variables**: Temas personalizados por integrante
-- **Animaciones CSS**: FadeIn, hover effects, transitions suaves
-- **Breakpoints**: Optimizados para 480px, 768px, 1024px
-- **Sidebar Colapsable**: Modo hamburguesa en móviles con overlay
+### 📋 Resumen de Mejoras Implementadas
 
-### ⚡ Performance
-- **Code Splitting**: Carga optimizada con Vite
-- **Lazy Loading**: Imágenes con loading="lazy"
-- **Optimización de Assets**: Imágenes en formato WebP
-- **Build Optimizado**: Minificación y tree-shaking automático
+Este TP3 incluye **5 mejoras obligatorias** que mejoran significativamente la experiencia de usuario, funcionalidad e interactividad de la aplicación:
 
-### 🔌 Integración de APIs
-- **Fetch Asíncrono**: Con `useEffect` y `useState`
-- **Loading States**: Indicadores de carga en todas las páginas
-- **Error Handling**: Manejo de errores de red con fallbacks
-- **Proxy Serverless**: `/api/deezer.js` para evitar CORS en Deezer
-- **iTunes Direct Fetch**: API pública sin autenticación ni proxy necesario
-- **Búsqueda en Tiempo Real**: Debounce y optimización de requests
-
-### 🎧 Sistema de Audio Global
-- **React Context API**: Estado compartido para reproducción en toda la app
-- **Audio Web API**: Reproducción nativa sin dependencias externas
-- **Player Flotante**: Componente persistente con z-index optimizado para móviles
-- **Controles Completos**: Play, pause, stop, seek en la barra de progreso
-- **Animaciones**: Carátula giratoria durante reproducción
-
-### ♿ Accesibilidad
-- **Semantic HTML**: Uso correcto de etiquetas
-- **ARIA Labels**: En elementos interactivos
-- **Navegación por teclado**: Soporte completo
-- **Contraste de colores**: AA WCAG compliance
+| Mejora                    | Estado | Ubicación                                | Impacto                        |
+| ------------------------- | ------ | ---------------------------------------- | ------------------------------ |
+| ✨ Animaciones Suaves     | ✅     | `src/styles/util.css`                    | Alto - UX mejorada             |
+| 🔍 Búsqueda/Filtrado JSON | ✅     | `src/pages/Peliculas.jsx`                | Alto - Funcionalidad nueva     |
+| 📄 Paginación API Externa | ✅     | `src/pages/Musica.jsx` + `api/deezer.js` | Medio - Navegación mejorada    |
+| 🖼️ Lightbox Interactivo   | ✅     | `src/pages/Peliculas.jsx`                | Alto - Experiencia visual      |
+| 📊 Barras de Habilidades  | ✅     | `src/pages/Integrantes.jsx`              | Medio - Visualización mejorada |
 
 ---
 
-## 🎯 Mejoras TP1 → TP2
+## 📸 Documentación de Mejoras TP3
 
-| TP1 (HTML/CSS/JS Estático) | TP2 (React SPA) |
-|-----------------------------|-----------------|
-| ❌ 5 archivos HTML separados | ✅ Single Page Application |
-| ❌ Recarga completa al navegar | ✅ Navegación instantánea sin recargas |
-| ❌ Código duplicado entre páginas | ✅ Componentes reutilizables (DRY) |
-| ❌ JavaScript vanilla disperso | ✅ React con hooks modernos |
-| ❌ Datos estáticos hardcodeados | ✅ APIs dinámicas (JSON + Deezer) |
-| ❌ Sin manejo de estados | ✅ useState + useEffect |
-| ❌ CSS repetitivo por página | ✅ CSS modular + variables globales |
-| ❌ Responsive básico | ✅ Mobile-first con 3 breakpoints |
-| ❌ Sin arquitectura definida | ✅ Arquitectura escalable por capas |
+### 1. ✨ Animaciones Suaves y Efectos Hover
+
+**Descripción:** Implementación de animaciones suaves y efectos hover mejorados en toda la aplicación para mejorar la experiencia visual y la interactividad.
+
+**Características implementadas:**
+
+- **Transiciones al cargar tarjetas:** Las tarjetas de películas y música aparecen con animación escalonada (slideInUp) con delays progresivos
+- **Efectos hover mejorados:**
+  - Tarjetas con elevación (`translateY(-8px)`) y escala (`scale(1.02)`) al pasar el mouse
+  - Imágenes con zoom suave en las tarjetas (`scale(1.1)`)
+  - Botones con efectos de escala y sombras dinámicas
+- **Transiciones entre páginas:** Animación suave al navegar entre secciones
+- **Curvas de animación:** Uso de `cubic-bezier(0.4, 0, 0.2, 1)` para transiciones más naturales
+
+**Ubicación del código:** `src/styles/util.css`
+
+**Cambios técnicos:**
+
+- Animaciones `fadeIn` y `slideInUp` con delays escalonados (0.1s, 0.2s, 0.3s...)
+- Hovers con `transform: scale()` y `translateY()`
+- Transiciones con duración de 0.3s a 0.5s
+- Efectos `:active` en botones para feedback táctil
+
+**Capturas de pantalla:**
+
+**Antes (TP2):**
+![Sin animaciones - TP2](./public/img/tp3-mejora1-animaciones-antes.png)
+_Nombre del archivo: `tp3-mejora1-animaciones-antes.png`_
+
+**Después (TP3):**
+![Con animaciones suaves - TP3](./public/img/tp3-mejora1-animaciones-despues.png)
+_Nombre del archivo: `tp3-mejora1-animaciones-despues.png`_
+
+> **Nota:** Las capturas deben mostrar el efecto hover en tarjetas y la animación de carga escalonada.
+
+---
+
+### 2. 🔍 Búsqueda y Filtrado en JSON Local
+
+**Descripción:** Sistema completo de búsqueda y filtrado para el catálogo de películas almacenadas localmente en `peliculas.json`.
+
+**Características implementadas:**
+
+- **Búsqueda por texto:** Busca en título, director y género simultáneamente mientras se escribe
+- **Filtro por género:** Dropdown con todos los géneros disponibles (extraídos dinámicamente del JSON)
+- **Filtro por rango de años:** Inputs numéricos para año "desde" y "hasta" con validación
+- **Contador dinámico:** Muestra "X de Y películas" según filtros aplicados
+- **Botón de reinicio:** Restablece todos los filtros al estado inicial
+
+**Ubicación del código:** `src/pages/Peliculas.jsx`
+
+**Funcionalidad técnica:**
+
+- Búsqueda en tiempo real con `useState` y `useMemo` para optimización
+- Filtros combinables (texto + género + años) que funcionan simultáneamente
+- Uso de `useMemo` para evitar recálculos innecesarios del filtrado
+- Validación de rangos de años (min/max calculados automáticamente)
+
+**Capturas de pantalla:**
+
+**Antes (TP2):**
+![Sin búsqueda/filtros - TP2](./public/img/tp3-mejora2-busqueda-filtros-antes.png)
+_Nombre del archivo: `tp3-mejora2-busqueda-filtros-antes.png`_
+
+**Después (TP3):**
+![Con búsqueda y filtros activos - TP3](./public/img/tp3-mejora2-busqueda-filtros-despues.png)
+_Nombre del archivo: `tp3-mejora2-busqueda-filtros-despues.png`_
+
+> **Nota:** Las capturas deben mostrar el campo de búsqueda, dropdown de género, inputs de años y el contador "X de Y películas" con filtros aplicados.
+
+---
+
+### 3. 📄 Paginación para API Externa
+
+**Descripción:** Sistema de paginación para navegar por los resultados de la API de Deezer (Top Global).
+
+**Características implementadas:**
+
+- **Botones de navegación:** Anterior y Siguiente para recorrer páginas
+- **Indicador de página:** Muestra "Página X" actual
+- **Deshabilitación inteligente:**
+  - Botón Anterior deshabilitado en página 1
+  - Botón Siguiente deshabilitado cuando no hay más resultados
+- **Contador de resultados:** Muestra cantidad de canciones por página y total de páginas
+
+**Ubicación del código:**
+
+- Frontend: `src/pages/Musica.jsx`
+- Backend: `api/deezer.js` (actualizado para soportar parámetros `page` y `limit`)
+
+**Funcionalidad técnica:**
+
+- Parámetros `page` y `limit` en la query string de la API
+- Cálculo automático del `index` para la API de Deezer: `index = (page - 1) * limit`
+- Estado de loading durante la carga de nuevas páginas
+- Manejo de estados vacíos cuando no hay más resultados
+
+**Capturas de pantalla:**
+
+**Antes (TP2):**
+![Sin paginación, solo top 10 - TP2](./public/img/tp3-mejora3-paginacion-antes.png)
+_Nombre del archivo: `tp3-mejora3-paginacion-antes.png`_
+
+**Después (TP3):**
+![Con controles de paginación - TP3](./public/img/tp3-mejora3-paginacion-despues.png)
+_Nombre del archivo: `tp3-mejora3-paginacion-despues.png`_
+
+> **Nota:** Las capturas deben mostrar los botones Anterior/Siguiente, el indicador "Página X" y el contador de resultados. Se recomienda mostrar la página 2 o superior para evidenciar la funcionalidad.
+
+---
+
+### 4. 🖼️ Galería de Imágenes Interactiva (Lightbox)
+
+**Descripción:** Lightbox completo para visualizar imágenes de películas en tamaño grande con controles avanzados de zoom y navegación.
+
+**Características implementadas:**
+
+- **Apertura al click:** Click en cualquier tarjeta de película abre el lightbox
+- **Navegación:** Botones ◀️ ▶️ para cambiar entre imágenes (navegación circular)
+- **Zoom:** Controles + Zoom y - Zoom (rango de 0.5x a 3x)
+- **Botón Reset:** Vuelve el zoom a 100%
+- **Cierre múltiple:**
+  - Botón "Cerrar (ESC)" en la barra superior
+  - Click fuera del contenido (overlay oscuro)
+  - Tecla ESC del teclado
+- **Navegación por teclado:** Flechas izquierda/derecha para cambiar imagen
+- **Controles fijos:** Barras superior e inferior siempre visibles con `position: sticky`, no se ocultan con el zoom
+- **Scroll automático:** Si la imagen ampliada es muy grande, permite scroll dentro del contenedor
+
+**Ubicación del código:** `src/pages/Peliculas.jsx`
+
+**Implementación técnica:**
+
+- Estado para controlar apertura/cierre (`lightboxOpen`), índice actual (`currentIndex`) y nivel de zoom (`zoom`)
+- `useEffect` para listeners de teclado (ESC, flechas) que se limpian al cerrar
+- Overlay con `position: fixed` y z-index alto (1000)
+- Controles con `position: sticky` para mantener visibilidad durante scroll
+- Prevención de propagación de eventos para evitar cierre accidental
+
+**Capturas de pantalla:**
+
+**Antes (TP2):**
+![Sin lightbox - TP2](./public/img/tp3-mejora4-lightbox-antes.png)
+_Nombre del archivo: `tp3-mejora4-lightbox-antes.png`_
+
+**Después (TP3):**
+![Lightbox abierto con zoom aplicado - TP3](./public/img/tp3-mejora4-lightbox-despues.png)
+_Nombre del archivo: `tp3-mejora4-lightbox-despues.png`_
+
+> **Nota:** Las capturas deben mostrar el lightbox abierto con la imagen grande, los controles de zoom visibles, y preferiblemente con zoom aplicado para evidenciar la funcionalidad. Se recomienda capturar también la navegación entre imágenes.
+
+---
+
+### 5. 📊 Barras de Progreso de Habilidades
+
+**Descripción:** Barras de progreso animadas que reflejan el nivel de cada habilidad de los integrantes del equipo.
+
+**Características implementadas:**
+
+- **Animación al cargar:** Las barras se llenan progresivamente desde 0% hasta su nivel objetivo (transición de 1 segundo)
+- **Diseño visual:**
+  - Barras con fondo semitransparente (`rgba(255, 255, 255, 0.1)`)
+  - Relleno con color del integrante (`--color-principal`)
+  - Efecto shimmer (brillo) animado que se desplaza continuamente
+  - Sombra con glow del color de la habilidad
+- **Información clara:**
+  - Nombre de la habilidad a la izquierda
+  - Porcentaje a la derecha en color destacado
+  - Altura responsive (24px desktop, 20px móvil)
+- **Datos por integrante:**
+  - **Paula:** HTML (90%), CSS (85%), PHP (80%), JavaScript (75%)
+  - **Micaela:** Impresión 3D (95%), Diseño Creativo (90%), Programación (75%), React (70%)
+  - **María:** Organización (95%), Trabajo en equipo (90%), Resolución de problemas (85%), Comunicación (92%)
+
+**Ubicación del código:**
+
+- Componente: `src/pages/Integrantes.jsx` (componente `SkillBar`)
+- Estilos: `src/pages/Integrantes.css`
+
+**Implementación técnica:**
+
+- Componente `SkillBar` con animación de `width` de 0% a nivel objetivo usando `useState` y `useEffect`
+- Transición de 1 segundo con `ease-out` para animación suave
+- Efecto shimmer con `::after` y animación `@keyframes shimmer` que se repite infinitamente
+- Diseño responsive con breakpoints para móviles (altura y tamaño de fuente reducidos)
+
+**Capturas de pantalla:**
+
+**Antes (TP2):**
+![Tags estáticos de especialidades - TP2](./public/img/tp3-mejora5-barras-habilidades-antes.png)
+_Nombre del archivo: `tp3-mejora5-barras-habilidades-antes.png`_
+
+**Después (TP3):**
+![Barras de progreso animadas - TP3](./public/img/tp3-mejora5-barras-habilidades-despues.png)
+_Nombre del archivo: `tp3-mejora5-barras-habilidades-despues.png`_
+
+> **Nota:** Las capturas deben mostrar claramente las barras de progreso con sus porcentajes y la animación de llenado. Se recomienda capturar la página de Integrantes mostrando al menos una tarjeta completa con las barras visibles.
+
+---
+
+## 📝 Guía de Capturas de Pantalla
+
+### 📸 Archivos Requeridos
+
+Para cumplir con los requisitos del TP3, debes agregar las siguientes capturas de pantalla en la carpeta `public/img/`:
+
+| Mejora                | Archivo "Antes"                            | Archivo "Después"                            |
+| --------------------- | ------------------------------------------ | -------------------------------------------- |
+| 1. Animaciones        | `tp3-mejora1-animaciones-antes.png`        | `tp3-mejora1-animaciones-despues.png`        |
+| 2. Búsqueda/Filtrado  | `tp3-mejora2-busqueda-filtros-antes.png`   | `tp3-mejora2-busqueda-filtros-despues.png`   |
+| 3. Paginación         | `tp3-mejora3-paginacion-antes.png`         | `tp3-mejora3-paginacion-despues.png`         |
+| 4. Lightbox           | `tp3-mejora4-lightbox-antes.png`           | `tp3-mejora4-lightbox-despues.png`           |
+| 5. Barras Habilidades | `tp3-mejora5-barras-habilidades-antes.png` | `tp3-mejora5-barras-habilidades-despues.png` |
+
+### 📋 Recomendaciones para las Capturas
+
+**Herramientas recomendadas:**
+
+- Windows: Snipping Tool, Lightshot, o `Win + Shift + S`
+- Mac: `Cmd + Shift + 4` o herramientas de captura nativas
+- Navegador: Extensiones como Fireshot o Awesome Screenshot
+
+**Características de las capturas:**
+
+- **Formato:** PNG o WebP (preferible para menor tamaño)
+- **Tamaños:** Capturar en diferentes resoluciones (desktop 1920x1080, tablet, móvil)
+- **Interacciones:** Mostrar hover, click, zoom cuando sea relevante
+- **Claridad:** Asegurar que el texto y elementos sean legibles
+- **Contexto:** Incluir suficiente contexto para entender la mejora
+
+**Ejemplos de qué capturar:**
+
+- **Animaciones:** Tarjeta con efecto hover visible, animación de carga en progreso
+- **Búsqueda:** Campo de búsqueda con texto, filtros aplicados, contador visible
+- **Paginación:** Botones de navegación, indicador de página, página 2 o superior
+- **Lightbox:** Lightbox abierto, controles de zoom visibles, zoom aplicado
+- **Barras:** Tarjeta completa de integrante, barras con porcentajes visibles
+
+---
+
+## 🎯 Comparación TP2 vs TP3
+
+| Aspecto                    | TP2 (Base)                 | TP3 (Mejorado)                                                           |
+| -------------------------- | -------------------------- | ------------------------------------------------------------------------ |
+| **Animaciones**            | Transiciones básicas       | ✨ Animaciones escalonadas, hovers mejorados, transiciones entre páginas |
+| **Búsqueda**               | ❌ Sin búsqueda            | ✅ Búsqueda por texto, filtros por género y años                         |
+| **Paginación**             | ❌ Solo top 10 fijo        | ✅ Paginación completa con navegación y contadores                       |
+| **Visualización Imágenes** | ❌ Solo tarjetas estáticas | ✅ Lightbox con zoom, navegación y controles avanzados                   |
+| **Habilidades**            | Tags estáticos             | ✅ Barras de progreso animadas con porcentajes                           |
+| **UX**                     | Funcional pero básico      | ✨ Experiencia mejorada con feedback visual y animaciones                |
+
+---
 
 ## 🌐 Deploy en Vercel
 
 ### Configuración Automática
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Framework Preset**: Vite
-- **Node Version**: 18.x
+
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+- **Framework Preset:** Vite
+- **Node Version:** 18.x
 
 ### Archivos de Configuración
 
 **`vercel.json`**
+
 ```json
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "functions": {
     "api/deezer.js": {
       "memory": 1024,
@@ -326,16 +514,19 @@ http://localhost:5173
 ### Problemas Comunes
 
 **❌ Error de CORS con Deezer API**
+
 ```bash
 ✅ Solución: Usar el proxy serverless en /api/deezer.js
 ```
 
 **❌ Sidebar no se cierra en móvil**
+
 ```bash
 ✅ Verificar que el overlay tenga el event listener correcto
 ```
 
 **❌ Imágenes no cargan**
+
 ```bash
 ✅ Verificar que las rutas sean relativas a /public
 ✅ Usar /img/nombre.webp (sin "public" en la ruta)
@@ -355,9 +546,9 @@ http://localhost:5173
 
 ## 📄 Licencia
 
-Este proyecto fue desarrollado como parte del Trabajo Práctico 2 de la materia Desarrollo Web Full Stack - 2025.
+Este proyecto fue desarrollado como parte del Trabajo Práctico 3 de la materia Desarrollo Web Full Stack - 2025.
 
 ---
 
 **Desarrollado con ❤️ por el Grupo 11**  
-*Trabajo Práctico 2 - React SPA con APIs - Octubre 2025*
+_Trabajo Práctico 3 - Mejoras y Evolución del Proyecto React - Noviembre 2025_

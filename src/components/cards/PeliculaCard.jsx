@@ -8,10 +8,11 @@ export default function PeliculaCard({
   director,
   duracion,
   rating,
-  url
+  url,
+  onOpen
 }) {
   return (
-    <div className="card-media fade-in">
+    <div className="card-media fade-in" onClick={onOpen} style={{ cursor: onOpen ? 'zoom-in' : 'default' }}>
       <img
         loading="lazy"
         src={poster || '/img/placeholder-movie.webp'}

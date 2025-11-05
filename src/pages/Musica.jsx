@@ -9,12 +9,13 @@ export default function Musica() {
   const [canciones, setCanciones] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
+  const [limit] = useState(10);
 
   useEffect(() => {
     const fetchDeezer = async () => {
       try {
-        // ✅ FIX: Siempre usar /api/deezer sin parámetros para top global
-        const response = await fetch("/api/deezer");
+        const response = await fetch(`/api/deezer?page=${page}&limit=${limit}`);
         
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
@@ -23,7 +24,7 @@ export default function Musica() {
         const data = await response.json();
 
         if (data.data && Array.isArray(data.data)) {
-          setCanciones(data.data.slice(0, 10)); // 🔹 Solo top 10 canciones
+          setCanciones(data.data);
         } else {
           setError("No se encontraron canciones 😞");
         }
@@ -35,8 +36,10 @@ export default function Musica() {
       }
     };
 
+    setLoading(true);
+    setError(null);
     fetchDeezer();
-  }, []);
+  }, [page, limit]);
 
   if (loading)
     return (
@@ -61,9 +64,22 @@ export default function Musica() {
 />
 
       <section className="media-listado card">
+        <div className="pagination-controls" style={{ display: "flex", gap: "0.75rem", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
+          <button className="btn-outline" onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page === 1}>
+            ◀️ Anterior
+          </button>
+          <span style={{ color: "#bbb" }}>Página {page}</span>
+          <button
+            className="btn-outline"
+            onClick={() => setPage((p) => p + 1)}
+            disabled={canciones.length < limit}
+          >
+            Siguiente ▶️
+          </button>
+        </div>
         <h2>Ranking mundial</h2>
         <p className="api-indicator">
-          Mostrando {canciones.length} canciones
+          Página {page} • {canciones.length} canciones
         </p>
 
         <div className="grid-media">

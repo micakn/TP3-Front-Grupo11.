@@ -84,6 +84,51 @@ export default function Bitacora() {
       fecha: "22/10/25", 
       titulo: "Entrega Final TP2", 
       descripcion: "Deploy exitoso en Vercel con todas las funcionalidades operativas incluyendo reproductor de música funcional. Repositorio GitHub actualizado con commits organizados. Proyecto completo cumpliendo 100% de las consignas: SPA funcional, 2 APIs integradas (Deezer + iTunes), responsive, diagramas incluidos, reproductor global."
+    },
+    { 
+      fecha: "20/10/25", 
+      titulo: "Lanzamiento TP3", 
+      descripcion: "Inicio del tercer trabajo práctico con el objetivo de implementar 5 mejoras obligatorias que mejoren la UX, funcionalidad e interactividad. Revisión de consignas y planificación de las mejoras: animaciones suaves, búsqueda/filtrado, paginación, lightbox y barras de progreso."
+    },
+    { 
+      fecha: "23/10/25", 
+      titulo: "Implementación de Animaciones Suaves", 
+      descripcion: "Agregado de animaciones escalonadas para tarjetas (slideInUp con delays), efectos hover mejorados con transform scale y translateY, y transiciones suaves entre páginas. Uso de cubic-bezier para curvas naturales. Implementado en util.css con animaciones reutilizables."
+    },
+    { 
+      fecha: "25/10/25", 
+      titulo: "Sistema de Búsqueda y Filtrado en Películas", 
+      descripcion: "Implementación de búsqueda por texto (título, director, género) en tiempo real, filtro por género con dropdown dinámico, y filtro por rango de años. Uso de useMemo para optimizar el rendimiento del filtrado. Contador dinámico 'X de Y películas' y botón de reinicio."
+    },
+    { 
+      fecha: "27/10/25", 
+      titulo: "Paginación para API Externa (Deezer)", 
+      descripcion: "Implementación de paginación completa en la página de Deezer con botones Anterior/Siguiente, indicador de página actual, y deshabilitación inteligente de botones. Actualización del backend (api/deezer.js) para soportar parámetros page y limit. Cálculo automático del index para la API."
+    },
+    { 
+      fecha: "29/10/25", 
+      titulo: "Lightbox Interactivo para Imágenes", 
+      descripcion: "Desarrollo de lightbox completo con navegación entre imágenes, controles de zoom (0.5x a 3x), botón reset, múltiples formas de cierre (ESC, click fuera, botón), navegación por teclado con flechas, y controles fijos que no se ocultan durante el zoom. Implementado con position fixed y sticky."
+    },
+    { 
+      fecha: "01/11/25", 
+      titulo: "Barras de Progreso de Habilidades", 
+      descripcion: "Creación del componente SkillBar con animación de llenado desde 0% hasta el nivel objetivo. Efecto shimmer animado, diseño responsive, y datos por integrante con porcentajes específicos. Implementado en la página de Integrantes reemplazando los tags estáticos anteriores."
+    },
+    { 
+      fecha: "05/11/25", 
+      titulo: "Optimización y Refinamiento", 
+      descripcion: "Ajustes finales de rendimiento, corrección de bugs en lightbox (controles que se ocultaban con zoom), mejora de animaciones responsive, y optimización de las barras de progreso. Testing exhaustivo en diferentes dispositivos y navegadores."
+    },
+    { 
+      fecha: "08/11/25", 
+      titulo: "Documentación y Capturas", 
+      descripcion: "Actualización completa del README.md con documentación detallada de las 5 mejoras, espacios para capturas de pantalla 'Antes' y 'Después', y actualización de la bitácora con todos los eventos del TP3. Preparación de capturas de pantalla para evidenciar cada mejora implementada."
+    },
+    { 
+      fecha: "10/11/25", 
+      titulo: "Entrega Final TP3", 
+      descripcion: "Deploy final en Vercel con todas las mejoras operativas. README actualizado con documentación completa y capturas de pantalla. Repositorio GitHub con commits organizados. Proyecto completo cumpliendo 100% de las consignas del TP3: 5 mejoras implementadas, documentadas y con evidencia visual."
     }
   ];
 
@@ -91,7 +136,7 @@ export default function Bitacora() {
     <div className="bitacora">
       <HeroSection
   title="📋 Bitácora de Desarrollo"
-  subtitle="Registro detallado del proceso de migración de TP1 a React SPA"
+  subtitle="Registro detallado del proceso: TP1 → TP2 → TP3"
   accentColor="#a855f7"
 />
 
@@ -153,6 +198,13 @@ export default function Bitacora() {
               en toda la aplicación con controles completos y barra de progreso interactiva.
             </p>
           </div>
+          <div className="card card-hover">
+            <h3 style={{color: '#a855f7', marginBottom: '1rem', fontWeight: '700'}}>✨ Optimización con useMemo</h3>
+            <p style={{color: '#ccc', lineHeight: '1.6'}}>
+              En el TP3, implementamos useMemo para optimizar el filtrado de películas y evitar 
+              recálculos innecesarios. Esto mejora el rendimiento especialmente con listas grandes.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -193,7 +245,7 @@ export default function Bitacora() {
           </div>
 
           <div className="card" style={{borderLeft: '4px solid #f472b6'}}>
-            <h4 style={{color: '#f472b6', marginBottom: '0.75rem', fontWeight: '700'}}>04. Código Duplicado</h4>
+            <h4 style={{color: '#f472b6', marginBottom: '0.75rem', fontWeight: '700'}}>04. Código Duplicado (TP2)</h4>
             <p style={{color: '#ccc', lineHeight: '1.6'}}>
               Los 3 portales individuales tenían 95% de código idéntico con solo cambios en datos y colores. 
               <strong>Solución:</strong> Creación del componente <code style={{
@@ -202,6 +254,27 @@ export default function Bitacora() {
                 borderRadius: '4px',
                 color: '#c084fc'
               }}>PortalBase.jsx</code> que recibe props configurables, eliminando ~450 líneas duplicadas.
+            </p>
+          </div>
+
+          <div className="card" style={{borderLeft: '4px solid #f472b6'}}>
+            <h4 style={{color: '#f472b6', marginBottom: '0.75rem', fontWeight: '700'}}>05. Controles de Lightbox con Zoom (TP3)</h4>
+            <p style={{color: '#ccc', lineHeight: '1.6'}}>
+              Los controles del lightbox se ocultaban cuando se aplicaba zoom a la imagen, dificultando la navegación. 
+              <strong>Solución:</strong> Implementación de barras fijas con <code style={{
+                background: 'rgba(168, 85, 247, 0.2)', 
+                padding: '2px 6px', 
+                borderRadius: '4px',
+                color: '#c084fc'
+              }}>position: sticky</code> para mantener los controles siempre visibles, y contenedor con scroll independiente para la imagen.
+            </p>
+          </div>
+
+          <div className="card" style={{borderLeft: '4px solid #f472b6'}}>
+            <h4 style={{color: '#f472b6', marginBottom: '0.75rem', fontWeight: '700'}}>06. Paginación en iTunes API (TP3)</h4>
+            <p style={{color: '#ccc', lineHeight: '1.6'}}>
+              La API de iTunes devuelve un resultCount limitado cuando se usa offset, dificultando obtener el total real de resultados. 
+              <strong>Solución:</strong> Para la página de Deezer se implementó paginación exitosa. Para iTunes se mantuvo la funcionalidad simple sin paginación debido a las limitaciones de la API.
             </p>
           </div>
         </div>
@@ -232,9 +305,9 @@ export default function Bitacora() {
         </div>
       </section>
 
-      {/* ✅ Comparación TP1 vs TP2 */}
+      {/* ✅ Comparación TP2 vs TP3 */}
       <section className="section-content">
-        <h2>📊 TP1 vs TP2: Evolución del Proyecto</h2>
+        <h2>📊 TP2 vs TP3: Evolución del Proyecto</h2>
         <div className="comparison-container" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -244,12 +317,12 @@ export default function Bitacora() {
         }}>
           <div className="card" style={{border: '2px solid #f472b6'}}>
             <h3 style={{color: '#f472b6', marginBottom: '1.5rem', textAlign: 'center', fontWeight: '700'}}>
-              TP1 - Sitio Estático
+              TP2 - React SPA Base
             </h3>
             <ul style={{listStyle: 'none', padding: 0}}>
-              {['5 archivos HTML separados', 'Recarga completa al navegar', '~800 líneas de CSS duplicado', 
-                'JavaScript vanilla disperso', 'Datos hardcodeados', 'Sin arquitectura escalable', 
-                'Dificultad para mantener'].map((item, i) => (
+              {['Animaciones básicas', 'Sin búsqueda/filtrado', 'Top 10 fijo (sin paginación)', 
+                'Tarjetas estáticas sin zoom', 'Tags estáticos de habilidades', 
+                'UX funcional pero básica'].map((item, i) => (
                 <li key={i} style={{
                   padding: '0.75rem 0',
                   borderBottom: '1px solid rgba(255,255,255,0.05)',
@@ -261,12 +334,12 @@ export default function Bitacora() {
 
           <div className="card" style={{border: '2px solid #a855f7'}}>
             <h3 style={{color: '#a855f7', marginBottom: '1.5rem', textAlign: 'center', fontWeight: '700'}}>
-              TP2 - React SPA
+              TP3 - Mejoras Implementadas
             </h3>
             <ul style={{listStyle: 'none', padding: 0}}>
-              {['Single Page Application', 'Navegación instantánea', 'CSS modular organizado', 
-                'Componentes React reutilizables', 'APIs dinámicas (JSON + Deezer)', 
-                'Arquitectura escalable por capas', 'Fácil de mantener y extender'].map((item, i) => (
+              {['✨ Animaciones escalonadas y hovers mejorados', '🔍 Búsqueda y filtros avanzados', 
+                '📄 Paginación completa con navegación', '🖼️ Lightbox con zoom y controles', 
+                '📊 Barras de progreso animadas', '🎨 UX mejorada con feedback visual'].map((item, i) => (
                 <li key={i} style={{
                   padding: '0.75rem 0',
                   borderBottom: '1px solid rgba(255,255,255,0.05)',
@@ -292,8 +365,16 @@ export default function Bitacora() {
             y el uso de GitHub para code reviews mantuvieron el proyecto organizado.
           </p>
           <p>
+            <strong>En el TP3 aprendimos:</strong> que las mejoras de UX no son solo "cosas bonitas", sino que 
+            impactan directamente en la usabilidad. Las animaciones suaves, los filtros intuitivos y los controles 
+            claros hacen que la aplicación se sienta profesional y pulida. La documentación con capturas de 
+            pantalla es esencial para evidenciar el trabajo realizado.
+          </p>
+          <p>
             <strong>Lo más valioso:</strong> entender que la componentización no es solo "dividir código", 
             sino pensar en piezas reutilizables y mantenibles que faciliten el crecimiento futuro del proyecto.
+            El TP3 demostró que una base sólida (TP2) permite agregar mejoras de forma incremental sin 
+            refactorizaciones masivas.
           </p>
         </div>
       </section>

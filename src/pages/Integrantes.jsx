@@ -1,7 +1,37 @@
 // src/pages/Integrantes.jsx - Página que muestra los integrantes del equipo
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/ui/HeroSection";
 import "./Integrantes.css";
+
+// Componente de barra de progreso animada (TP3)
+function SkillBar({ skill, level, color = "#F8B55F" }) {
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimated(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="skill-bar-container">
+      <div className="skill-bar-header">
+        <span className="skill-name">{skill}</span>
+        <span className="skill-level">{level}%</span>
+      </div>
+      <div className="skill-bar-wrapper">
+        <div
+          className="skill-bar-fill"
+          style={{
+            width: animated ? `${level}%` : '0%',
+            backgroundColor: color,
+            transition: 'width 1s ease-out',
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function Integrantes() {
   const integrantes = [
@@ -13,7 +43,12 @@ export default function Integrantes() {
       avatar: "/img/card-Paula.webp",
       descripcion:
         "Apasionada por la tecnología y el desarrollo web. Especializada en HTML, CSS, PHP y JavaScript.",
-      especialidades: ["HTML", "CSS", "PHP", "JavaScript"],
+      habilidades: [
+        { nombre: "HTML", nivel: 90 },
+        { nombre: "CSS", nivel: 85 },
+        { nombre: "PHP", nivel: 80 },
+        { nombre: "JavaScript", nivel: 75 },
+      ],
       ruta: "/paula",
       color: "#F8B55F",
     },
@@ -25,11 +60,11 @@ export default function Integrantes() {
       avatar: "/img/card-Micaela.webp",
       descripcion:
         "Creativa y detallista, combina diseño y programación. Aficionada a la impresión 3D y el café.",
-      especialidades: [
-        "Impresión 3D",
-        "Diseño Creativo",
-        "Programación",
-        "Café ☕",
+      habilidades: [
+        { nombre: "Impresión 3D", nivel: 95 },
+        { nombre: "Diseño Creativo", nivel: 90 },
+        { nombre: "Programación", nivel: 75 },
+        { nombre: "React", nivel: 70 },
       ],
       ruta: "/micaela",
       color: "#F8B55F",
@@ -42,11 +77,11 @@ export default function Integrantes() {
       avatar: "/img/card-Maria.webp",
       descripcion:
         "Organizada y comunicativa, combina su experiencia en gestión de proyectos con una visión artística que da identidad y equilibrio al equipo.",
-      especialidades: [
-        "Organización",
-        "Trabajo en equipo",
-        "Resolución de problemas",
-        "Comunicación",
+      habilidades: [
+        { nombre: "Organización", nivel: 95 },
+        { nombre: "Trabajo en equipo", nivel: 90 },
+        { nombre: "Resolución de problemas", nivel: 85 },
+        { nombre: "Comunicación", nivel: 92 },
       ],
       ruta: "/maria",
       color: "#F8B55F",
@@ -85,12 +120,15 @@ export default function Integrantes() {
                 <p className="descripcion">{i.descripcion}</p>
 
                 <div className="especialidades">
-                  <h4>Especialidades:</h4>
-                  <div className="especialidades-tags">
-                    {i.especialidades.map((esp, j) => (
-                      <span key={j} className="especialidad-tag">
-                        {esp}
-                      </span>
+                  <h4>Habilidades:</h4>
+                  <div className="habilidades-bars">
+                    {i.habilidades.map((hab, j) => (
+                      <SkillBar
+                        key={j}
+                        skill={hab.nombre}
+                        level={hab.nivel}
+                        color={i.color}
+                      />
                     ))}
                   </div>
                 </div>
